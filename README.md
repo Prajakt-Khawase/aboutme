@@ -1,5 +1,5 @@
 # aboutme
-Hi Myself Prajakt. I am from India.
+Hi Myself Prajakt. I am from India. I am a student of NorthWest Missiouri State University. This project is about publishing our own web pages with README.md.
 
 ## My Repository Link
 
