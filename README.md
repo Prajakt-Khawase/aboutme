@@ -32,7 +32,10 @@ Hi Myself Prajakt.
    
  ## Contributors.
    
-   Prajakt Uttamrao Khawase ( Masters In Applied Computer Science )
+   Prajakt Uttamrao Khawase 
+   
+   Course ( Masters In Applied Computer Science )
+   
    Northwest Missouri State University.
    
    - The Image To Display
