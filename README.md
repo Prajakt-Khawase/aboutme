@@ -26,4 +26,6 @@ Hi Myself Prajakt.
  - [How To Activate Developer Mode](https://www.howtogeek.com/292914/what-is-developer-mode-in-windows-10/)
  
  - [How To Manage Files In Windows](https://github.com/denisecase/windows-file-management)
+ 
+ - [Know About PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/powershell-scripting?view=powershell-6)
    
