@@ -24,4 +24,6 @@ Hi Myself Prajakt.
  ## Recommended Resources.
  
  - [How To Activate Developer Mode](https://www.howtogeek.com/292914/what-is-developer-mode-in-windows-10/)
+ 
+ - [How To Manage Files In Windows](https://github.com/denisecase/windows-file-management)
    
