@@ -20,4 +20,6 @@ Hi Myself Prajakt.
  
  1. Chocolatey is a windows package manager.
  1. Chocolatey can be used to upgrade, remove software on Windows. 
+ 
+ ## Recommended Resources.
    
