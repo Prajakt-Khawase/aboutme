@@ -30,7 +30,7 @@ Hi Myself Prajakt.
  - [Know About PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/powershell-scripting?view=powershell-6)
    
    
-   ## Contributors.
+ ## Contributors.
    
    Prajakt Uttamrao Khawase ( Masters In Applied Computer Science )
    
