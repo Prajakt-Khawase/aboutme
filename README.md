@@ -22,4 +22,6 @@ Hi Myself Prajakt.
  1. Chocolatey can be used to upgrade, remove software on Windows. 
  
  ## Recommended Resources.
+ 
+ - [How To Activate Developer Mode](https://www.howtogeek.com/292914/what-is-developer-mode-in-windows-10/)
    
