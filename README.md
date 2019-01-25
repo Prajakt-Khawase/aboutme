@@ -17,4 +17,7 @@ Hi Myself Prajakt.
  1. It is used for source-code management and also can be used to keep track of changes made while developing projects.
  
  - [Chocolatey](https://chocolatey.org/).
+ 
+ 1. Chocolatey is a windows package manager.
+ 1. Chocolatey can be used to upgrade, remove software on Windows. 
    
