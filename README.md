@@ -21,7 +21,7 @@ Hi Myself Prajakt. I am from India. I am a student of NorthWest Missiouri State 
  1. Chocolatey is a windows package manager.
  1. Chocolatey can be used to upgrade, remove software on Windows. 
  
- ## Recommended Resources.
+## Recommended Resources.
  
  - [How To Activate Developer Mode](https://www.howtogeek.com/292914/what-is-developer-mode-in-windows-10/)
  
@@ -30,7 +30,7 @@ Hi Myself Prajakt. I am from India. I am a student of NorthWest Missiouri State 
  - [Know About PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/powershell-scripting?view=powershell-6)
    
    
- ## Contributors.
+## Contributors.
    
    Prajakt Uttamrao Khawase 
    
