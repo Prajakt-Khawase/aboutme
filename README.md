@@ -41,3 +41,6 @@ Hi Myself Prajakt. I am from India. I am a student of NorthWest Missiouri State 
    - The Image To Display
    
    ![Hosted image](https://paultrani.com/wp-content/uploads/2016/04/lion-1170x830.png)
+   
+   
+## External Referances used for Module 2: P2 styled site
