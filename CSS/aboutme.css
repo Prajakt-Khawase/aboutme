@@ -1,6 +1,4 @@
-body {
-    padding-top: 5rem;
-  }
+
   
   body, html {
     height: 100%;
@@ -8,13 +6,13 @@ body {
   
   .video-wrapper {
     width: 100%;
-    background-color: lightblue;
+    
   }
   
   section {
     margin: 1rem;
     padding: 2rem;
-    background-color: lightblue;
+    background-color: grey;
     border-radius: 2em;
   }
   
