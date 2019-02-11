@@ -28,4 +28,9 @@
     background-attachment: fixed; /* fixed in viewport */
   }
   
-  
+  #Java{
+    color:red;
+  }
+  #WebApps{
+    color:blue;
+  }
