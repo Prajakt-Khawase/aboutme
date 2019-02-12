@@ -38,3 +38,12 @@
 
     color: Red;
   }
+  footer {
+    position:  relative;
+    color: black;
+    bottom:0;
+    width:100%;
+    text-align: center;
+    height:60px;   /* Height of the footer */
+    background:white;
+ }
