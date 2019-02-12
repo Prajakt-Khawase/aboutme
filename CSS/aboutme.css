@@ -18,14 +18,14 @@
   }
   
   .bgimg {
-    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+    background-image: url("images/MyClick.jpg");
     height: 100%;
     position: relative;
     opacity: 0.85;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed; /* fixed in viewport */
+    background-attachment: fixed;
   }
   
   #Java{
@@ -33,4 +33,8 @@
   }
   #WebApps{
     color:blue;
+  }
+  .hobbies{
+
+    color: Red;
   }
