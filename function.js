@@ -40,3 +40,10 @@ document.getElementById('clearStorage').addEventListener('click', () =>{
     localStorage.removeItem('length')
     localStorage.removeItem('height')
     localStorage.removeItem('width')
+
+})
+
+btnElement.addEventListener('click', function(){calcVolume(lengthElement.value,heightElement.value,widthElement.value)});
+quoteElement.addEventListener('dblclick', function(){quoteHandler()});
+
+console.log('Declaring functions');
