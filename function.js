@@ -53,4 +53,9 @@ function calcVolume(l,h,w){
 
     localStorage.setItem('length', l);
     localStorage.setItem('height', h);
-	localStorage.setItem('width', w);
+    localStorage.setItem('width', w);
+    
+    if(l < 0 || h < 0 || w < 0){
+        answerElement.innerHTML = `Invalid input - cannot be negative`
+        return -1;
+    }
