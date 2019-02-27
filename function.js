@@ -9,3 +9,7 @@ const widthElement = document.getElementById("width");
 const btnElement = document.getElementById("calcbtn");
 const answerElement = document.getElementById("answerText");
 const quoteElement = document.getElementById("quote");
+
+const length = lengthElement.value;
+const height = heightElement.value;
+const width = widthElement.value;
