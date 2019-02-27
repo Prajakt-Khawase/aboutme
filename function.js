@@ -70,3 +70,9 @@ function calcVolume(l,h,w){
         answerElement.innerHTML = `Invalid input - input too large`
         return null;
     }
+
+    else{
+        answerElement.innerHTML = `The volume is: ${volume} cubic centimeters.`
+        return volume;
+    }
+}
