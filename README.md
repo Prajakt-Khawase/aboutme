@@ -48,6 +48,12 @@ Hi Myself Prajakt. I am from India. I am a student of NorthWest Missiouri State 
  - [getbootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
  - [fontawesome.com](https://fontawesome.com/v4.7.0/icon/bitbucket-square)
 
+ ## External Referances used for Module 2: P3 styled site
+
+    For Ajax Call taken help from slide 51 shared by Dr. Denise Case
+
+ - [jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com/todos/1)
+
 
 
    

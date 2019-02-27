@@ -76,3 +76,26 @@ function calcVolume(l,h,w){
         return volume;
     }
 }
+
+// from example in the slides and taken url of jasonplaceholder.com
+function getQuote() {
+    return new Promise(function (resolve, reject) {  
+      const req = new XMLHttpRequest();  
+      req.timeout = 2000; 
+      req.onreadystatechange = function (e) {
+        if (req.readyState === 4) {
+          if (req.status === 200) {
+            const fact = req.response;
+            resolve(fact)
+          } else {
+            reject(req.status)
+          }
+        }
+      }
+      req.ontimeout = function () {
+        reject('Error - timed out: ' + req.time)
+      }
+      req.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);  
+      req.send();
+    })
+  }
