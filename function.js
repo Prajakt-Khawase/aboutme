@@ -33,3 +33,10 @@ if (localStorage.getItem('width')){
   document.getElementById('width').value = parseInt(localStorage.width)
 }
 })
+
+
+//clear local storage
+document.getElementById('clearStorage').addEventListener('click', () =>{
+    localStorage.removeItem('length')
+    localStorage.removeItem('height')
+    localStorage.removeItem('width')
