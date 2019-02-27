@@ -59,3 +59,8 @@ function calcVolume(l,h,w){
         answerElement.innerHTML = `Invalid input - cannot be negative`
         return -1;
     }
+
+    else if(r=="" || h=="" || w==""){
+        answerElement.innerHTML = `Invalid input - cannot be null`
+        return null;
+    }
