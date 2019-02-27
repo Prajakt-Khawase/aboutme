@@ -25,3 +25,11 @@ window.addEventListener('load', (event) => {
   console.log(' Starting initialization!')
   if (localStorage.getItem('length')){
     document.getElementById('length').value = parseInt(localStorage.length)
+}
+if (localStorage.getItem('height')){
+  document.getElementById('height').value = parseInt(localStorage.height)
+}
+if (localStorage.getItem('width')){
+  document.getElementById('width').value = parseInt(localStorage.width)
+}
+})
