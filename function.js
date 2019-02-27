@@ -99,3 +99,11 @@ function getQuote() {
       req.send();
     })
   }
+
+  async function quoteHandler() {
+    const fact = await getQuote();
+    console.log(fact);
+    $("#quote").html(fact);
+  }
+
+console.log('INFO: Done loading, waiting for an event'); 
