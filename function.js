@@ -64,3 +64,9 @@ function calcVolume(l,h,w){
         answerElement.innerHTML = `Invalid input - cannot be null`
         return null;
     }
+
+
+    else if(r > 100000 || h > 100000 || w > 100000 ){
+        answerElement.innerHTML = `Invalid input - input too large`
+        return null;
+    }
