@@ -47,3 +47,10 @@ btnElement.addEventListener('click', function(){calcVolume(lengthElement.value,h
 quoteElement.addEventListener('dblclick', function(){quoteHandler()});
 
 console.log('Declaring functions');
+
+function calcVolume(l,h,w){
+    const volume = l * w * h / 3;
+
+    localStorage.setItem('length', l);
+    localStorage.setItem('height', h);
+	localStorage.setItem('width', w);
