@@ -13,3 +13,7 @@ const quoteElement = document.getElementById("quote");
 const length = lengthElement.value;
 const height = heightElement.value;
 const width = widthElement.value;
+
+console.log("length", length);
+console.log("height", height);
+console.log("width", width);
