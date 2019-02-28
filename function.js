@@ -22,16 +22,16 @@ console.log('INFO: Configuring event handlers');
 
 //Storing Locally as Guided by Dr. Case
 window.addEventListener('load', (event) => {
-  console.log(' Starting initialization!')
-  if (localStorage.getItem('length')){
-    document.getElementById('length').value = parseInt(localStorage.length)
-}
-if (localStorage.getItem('height')){
-  document.getElementById('height').value = parseInt(localStorage.height)
-}
-if (localStorage.getItem('width')){
-  document.getElementById('width').value = parseInt(localStorage.width)
-}
+//   console.log(' Starting initialization!')
+//   if (localStorage.getItem('length')){
+//     document.getElementById('length').value = parseInt(localStorage.length)
+// }
+// if (localStorage.getItem('height')){
+//   document.getElementById('height').value = parseInt(localStorage.height)
+// }
+// if (localStorage.getItem('width')){
+//   document.getElementById('width').value = parseInt(localStorage.width)
+// }
 })
 
 
@@ -74,7 +74,7 @@ function testing_volume(){
 
     else{
       
-      document.getElementById("answerText").innerHTML = "The volume is: "+ volume +" cubic centimeters."
+      document.getElementById("answerText").innerHTML = "The volume is: "+ Math.round(volume) +" cubic centimeters."
         // answerElement.innerHTML = `The volume is: ${volume} cubic centimeters.`
         // return volume;
     }
