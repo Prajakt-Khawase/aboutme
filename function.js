@@ -10,9 +10,9 @@ const btnElement = document.getElementById("calcbtn");
 const answerElement = document.getElementById("answerText");
 const quoteElement = document.getElementById("quote");
 
-const length = lengthElement.value;
-const height = heightElement.value;
-const width = widthElement.value;
+const length = lengthElement;
+const height = heightElement;
+const width = widthElement;
 
 console.log("length", length);
 console.log("height", height);
@@ -35,47 +35,82 @@ if (localStorage.getItem('width')){
 })
 
 
-//clear local storage
-document.getElementById('clearStorage').addEventListener('click', () =>{
-    localStorage.removeItem('length')
-    localStorage.removeItem('height')
-    localStorage.removeItem('width')
 
-})
 
-btnElement.addEventListener('click', calcVolume(lengthElement.value,heightElement.value,widthElement.value));
-quoteElement.addEventListener('dblclick', function(){quoteHandler()});
+
+
+// btnElement.addEventListener('click', calcVolume(lengthElement,heightElement,widthElement));
+
+//quoteElement.addEventListener('dblclick', function(){quoteHandler()});
 
 console.log('Declaring functions');
 
-function calcVolume(l,h,w){
-    const volume = l * w * h / 3;
+
+function testing_volume(){
+  const l = parseInt(document.getElementById("length").value);
+  const h = parseInt(document.getElementById("height").value);
+  const w = parseInt(document.getElementById("width").value);
+
+  
+
+  const volume = (l * w * h) / 3;
 
     localStorage.setItem('length', l);
     localStorage.setItem('height', h);
     localStorage.setItem('width', w);
     
     if(l < 0 || h < 0 || w < 0){
-        answerElement.innerHTML = `Invalid input - cannot be negative`
-        return -1;
+        //answerElement.innerHTML = `Invalid input - cannot be negative`
+        
+        document.getElementById("answerText").innerHTML = "Invalid input - cannot be negative"
+        
     }
-
-    else if(r=="" || h=="" || w==""){
-        answerElement.innerHTML = `Invalid input - cannot be null`
-        return null;
-    }
-
-
-    else if(r > 100000 || h > 100000 || w > 100000 ){
-        answerElement.innerHTML = `Invalid input - input too large`
-        return null;
+    else if(l > 100000 || h > 100000 || w > 100000 ){
+        //answerElement.innerHTML = `Invalid input - input too large`
+        
+        document.getElementById("answerText").innerHTML = "Invalid input - input too large"
+        
     }
 
     else{
-        answerElement.innerHTML = `The volume is: ${volume} cubic centimeters.`
-        return volume;
+      
+      document.getElementById("answerText").innerHTML = "The volume is: "+ volume +" cubic centimeters."
+        // answerElement.innerHTML = `The volume is: ${volume} cubic centimeters.`
+        // return volume;
     }
+
+
 }
+      
+
+// function calcVolume(l,h,w){
+//     const volume = l * w * h / 3;
+
+//     localStorage.setItem('length', l);
+//     localStorage.setItem('height', h);
+//     localStorage.setItem('width', w);
+    
+//     if(l < 0 || h < 0 || w < 0){
+//         answerElement.innerHTML = `Invalid input - cannot be negative`
+//         return -1;
+//     }
+
+//     else if(r=="" || h=="" || w==""){
+//         answerElement.innerHTML = `Invalid input - cannot be null`
+//         return null;
+//     }
+
+
+//     else if(r > 100000 || h > 100000 || w > 100000 ){
+//         answerElement.innerHTML = `Invalid input - input too large`
+//         return null;
+//     }
+
+//     else{
+//         answerElement.innerHTML = `The volume is: ${volume} cubic centimeters.`
+//         return volume;
+//     }
+// }
 
 // from example in the slides and taken url of jasonplaceholder.com
 function getQuote() {
@@ -105,5 +140,14 @@ function getQuote() {
     console.log(fact);
     $("#quote").html(fact);
   }
+
+
+// //clear local storage
+// document.getElementById('clearStorage').addEventListener('click', () =>{
+//   localStorage.removeItem('length')
+//   localStorage.removeItem('height')
+//   localStorage.removeItem('width')
+
+// })
 
 console.log('INFO: Done loading, waiting for an event'); 
