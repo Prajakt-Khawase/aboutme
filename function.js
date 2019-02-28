@@ -43,7 +43,7 @@ document.getElementById('clearStorage').addEventListener('click', () =>{
 
 })
 
-btnElement.addEventListener('click', function(){calcVolume(lengthElement.value,heightElement.value,widthElement.value)});
+btnElement.addEventListener('click', calcVolume(lengthElement.value,heightElement.value,widthElement.value));
 quoteElement.addEventListener('dblclick', function(){quoteHandler()});
 
 console.log('Declaring functions');
