@@ -53,7 +53,7 @@ function testing_volume(){
 
   
 
-  const volume = (l * w * h) / 3;
+  const volume = calcVolume(l,h,w)
 
     localStorage.setItem('length', l);
     localStorage.setItem('height', h);
@@ -72,6 +72,11 @@ function testing_volume(){
         
     }
 
+    else if(isNaN(l) ||isNaN(h) || isNaN(w)){
+      //answerElement.innerHTML = `Invalid input - input too large`
+      
+      document.getElementById("answerText").innerHTML = "Invalid input - input can not be blank"
+    }
     else{
       
       document.getElementById("answerText").innerHTML = "The volume is: "+ volume.toFixed(2)+" cubic centimeters."
@@ -82,7 +87,9 @@ function testing_volume(){
 
 }
       
-
+function calcVolume(l,h,w){
+  return (l * w * h) / 3;
+}
 // function calcVolume(l,h,w){
 //     const volume = l * w * h / 3;
 
