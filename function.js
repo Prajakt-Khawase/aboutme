@@ -141,29 +141,33 @@ function testing_volume(){
 //     $("#quote").html(fact);
 //   }
 
-const url = "https://thesimpsonsquoteapi.glitch.me/quotes"
-document.getElementById('simpbutt').addEventListener('mouseover', function() {
-    fetch(url) //fetch is the simplifed version of xmlhttprequest
-    .then((res) => { return res.json() }) //receiving returning response as JSON application
-    .then((data) => {            // selecting which data retrieved from returned response to be displayed on html
-        data.forEach((item) => {
-            const { quote, character } = item
-            const result = `Quote : "${quote}"  By : ${character}`
-            document.getElementById('simpsons').innerHTML = result;
-        });
-    })
-    .catch(function (error) {
-        console.log(JSON.stringify(error)); //logs in console whenever HTTP response error occurs (failed HTTP response handling)
-    })
-})
-console.log('Script End')
+function getQuote() {
+  return new Promise(function (resolve, reject) {  
+    const req = new XMLHttpRequest();  
+    req.timeout = 2000; 
+    req.onreadystatechange = function (e) {
+      if (req.readyState === 4) {
+        if (req.status === 200) {
+          const fact = req.response;
+          resolve(fact)
+        } else {
+          reject(req.status)
+        }
+      }
+    }
+    req.ontimeout = function () {
+      reject('Error - timed out: ' + req.time)
+    }
+    req.open("GET", "https://ron-swanson-quotes.herokuapp.com/v2/quotes", true);  
+    req.send();
+  })
+}
+document.getElementById('quote').addEventListener("click",async function (){const fact = await getQuote();
+  console.log(fact);
+  $("#quote").html(fact);});
 
-// //clear local storage
-// document.getElementById('clearStorage').addEventListener('click', () =>{
-//   localStorage.removeItem('length')
-//   localStorage.removeItem('height')
-//   localStorage.removeItem('width')
-
-// })
-
-console.log('INFO: Done loading, waiting for an event'); 
+async function quoteHandler() {
+  const fact = await getQuote();
+  console.log(fact);
+  $("#quote").html(fact);
+}
