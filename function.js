@@ -47,9 +47,9 @@ console.log('Declaring functions');
 
 
 function testing_volume(){
-  const l = parseInt(document.getElementById("length").value);
-  const h = parseInt(document.getElementById("height").value);
-  const w = parseInt(document.getElementById("width").value);
+  const l = parseFloat(document.getElementById("length").value);
+  const h = parseFloat(document.getElementById("height").value);
+  const w = parseFloat(document.getElementById("width").value);
 
   
 
@@ -74,7 +74,7 @@ function testing_volume(){
 
     else{
       
-      document.getElementById("answerText").innerHTML = "The volume is: "+ Math.round(volume) +" cubic centimeters."
+      document.getElementById("answerText").innerHTML = "The volume is: "+ volume.toFixed(2)+" cubic centimeters."
         // answerElement.innerHTML = `The volume is: ${volume} cubic centimeters.`
         // return volume;
     }
@@ -113,34 +113,50 @@ function testing_volume(){
 // }
 
 // from example in the slides and taken url of jasonplaceholder.com
-function getQuote() {
-    return new Promise(function (resolve, reject) {  
-      const req = new XMLHttpRequest();  
-      req.timeout = 2000; 
-      req.onreadystatechange = function (e) {
-        if (req.readyState === 4) {
-          if (req.status === 200) {
-            const fact = req.response;
-            resolve(fact)
-          } else {
-            reject(req.status)
-          }
-        }
-      }
-      req.ontimeout = function () {
-        reject('Error - timed out: ' + req.time)
-      }
-      req.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);  
-      req.send();
+// function getQuote() {
+//     return new Promise(function (resolve, reject) {  
+//       const req = new XMLHttpRequest();  
+//       req.timeout = 2000; 
+//       req.onreadystatechange = function (e) {
+//         if (req.readyState === 4) {
+//           if (req.status === 200) {
+//             const fact = req.response;
+//             resolve(fact)
+//           } else {
+//             reject(req.status)
+//           }
+//         }
+//       }
+//       req.ontimeout = function () {
+//         reject('Error - timed out: ' + req.time)
+//       }
+//       req.open("GET", "https://ron-swanson-quotes.herokuapp.com/v2/quotes", true);  
+//       req.send();
+//     })
+//   }
+
+//   async function quoteHandler() {
+//     const fact = await getQuote();
+//     console.log(fact);
+//     $("#quote").html(fact);
+//   }
+
+const url = "https://thesimpsonsquoteapi.glitch.me/quotes"
+document.getElementById('simpbutt').addEventListener('mouseover', function() {
+    fetch(url) //fetch is the simplifed version of xmlhttprequest
+    .then((res) => { return res.json() }) //receiving returning response as JSON application
+    .then((data) => {            // selecting which data retrieved from returned response to be displayed on html
+        data.forEach((item) => {
+            const { quote, character } = item
+            const result = `Quote : "${quote}"  By : ${character}`
+            document.getElementById('simpsons').innerHTML = result;
+        });
     })
-  }
-
-  async function quoteHandler() {
-    const fact = await getQuote();
-    console.log(fact);
-    $("#quote").html(fact);
-  }
-
+    .catch(function (error) {
+        console.log(JSON.stringify(error)); //logs in console whenever HTTP response error occurs (failed HTTP response handling)
+    })
+})
+console.log('Script End')
 
 // //clear local storage
 // document.getElementById('clearStorage').addEventListener('click', () =>{
