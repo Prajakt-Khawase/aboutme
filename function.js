@@ -141,33 +141,15 @@ function testing_volume(){
 //     $("#quote").html(fact);
 //   }
 
-function getQuote() {
-  return new Promise(function (resolve, reject) {  
-    const req = new XMLHttpRequest();  
-    req.timeout = 2000; 
-    req.onreadystatechange = function (e) {
-      if (req.readyState === 4) {
-        if (req.status === 200) {
-          const fact = req.response;
-          resolve(fact)
-        } else {
-          reject(req.status)
-        }
-      }
-    }
-    req.ontimeout = function () {
-      reject('Error - timed out: ' + req.time)
-    }
-    req.open("GET", "https://ron-swanson-quotes.herokuapp.com/v2/quotes", true);  
-    req.send();
-  })
-}
-document.getElementById('quote').addEventListener("click",async function (){const fact = await getQuote();
-  console.log(fact);
-  $("#quote").html(fact);});
+ //Ajax call
+ $.ajax({
+  url: "https://jsonplaceholder.typicode.com/todos/1",
+  type: 'GET',
+  success: function(res) {
 
-async function quoteHandler() {
-  const fact = await getQuote();
-  console.log(fact);
-  $("#quote").html(fact);
-}
+      $("#ajaxValue").html(res.title);
+
+      console.log(res);
+    
+  }
+})
