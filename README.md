@@ -50,9 +50,7 @@ Hi Myself Prajakt. I am from India. I am a student of NorthWest Missiouri State 
 
  ## External Referances used for Module 2: P3 styled site
 
-    For Ajax Call taken help from slide 51 shared by Dr. Denise Case
-
- - [jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com/todos/1)
+    
 
 
 
