@@ -46,7 +46,7 @@ window.addEventListener('load', (event) => {
 console.log('Declaring functions');
 
 
-function testing_volume(){
+function testing_volume() {
   const l = parseFloat(document.getElementById("length").value);
   const h = parseFloat(document.getElementById("height").value);
   const w = parseFloat(document.getElementById("width").value);
@@ -86,10 +86,11 @@ function testing_volume(){
 
 
 }
+
       
 function calcVolume(l,h,w){
-  const totalVolume =  (l * w * h) / 3;
-  return totalVolume;
+  return (l * w * h) / 3;
+  
 }
 
 
@@ -105,7 +106,3 @@ $.ajax({
   }
 })
 
-document.getElementById("totalVolume").innerHTML = + totalVolume;
-
-
-});
