@@ -88,68 +88,12 @@ function testing_volume(){
 }
       
 function calcVolume(l,h,w){
-  return (l * w * h) / 3;
+  const totalVolume =  (l * w * h) / 3;
+  return totalVolume;
 }
-// function calcVolume(l,h,w){
-//     const volume = l * w * h / 3;
-
-//     localStorage.setItem('length', l);
-//     localStorage.setItem('height', h);
-//     localStorage.setItem('width', w);
-    
-//     if(l < 0 || h < 0 || w < 0){
-//         answerElement.innerHTML = `Invalid input - cannot be negative`
-//         return -1;
-//     }
-
-//     else if(r=="" || h=="" || w==""){
-//         answerElement.innerHTML = `Invalid input - cannot be null`
-//         return null;
-//     }
 
 
-//     else if(r > 100000 || h > 100000 || w > 100000 ){
-//         answerElement.innerHTML = `Invalid input - input too large`
-//         return null;
-//     }
-
-//     else{
-//         answerElement.innerHTML = `The volume is: ${volume} cubic centimeters.`
-//         return volume;
-//     }
-// }
-
-// from example in the slides and taken url of jasonplaceholder.com
-// function getQuote() {
-//     return new Promise(function (resolve, reject) {  
-//       const req = new XMLHttpRequest();  
-//       req.timeout = 2000; 
-//       req.onreadystatechange = function (e) {
-//         if (req.readyState === 4) {
-//           if (req.status === 200) {
-//             const fact = req.response;
-//             resolve(fact)
-//           } else {
-//             reject(req.status)
-//           }
-//         }
-//       }
-//       req.ontimeout = function () {
-//         reject('Error - timed out: ' + req.time)
-//       }
-//       req.open("GET", "https://ron-swanson-quotes.herokuapp.com/v2/quotes", true);  
-//       req.send();
-//     })
-//   }
-
-//   async function quoteHandler() {
-//     const fact = await getQuote();
-//     console.log(fact);
-//     $("#quote").html(fact);
-//   }
-
- //Ajax call
- $.ajax({
+$.ajax({
   url: "https://jsonplaceholder.typicode.com/todos/1",
   type: 'GET',
   success: function(res) {
@@ -160,3 +104,8 @@ function calcVolume(l,h,w){
     
   }
 })
+
+document.getElementById("totalVolume").innerHTML = + totalVolume;
+
+
+});
