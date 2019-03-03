@@ -93,21 +93,24 @@ function calcVolume(l,h,w){
   
 }
 
+
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "https://thesimpsonsquoteapi.glitch.me/quotes", true);
+  xhttp.send();
+}
+
 $(document).ready(function(){
   $("button").click(function(){
     $(".test").hide();
   });
 });
 
-$.ajax({
-  url: "https://jsonplaceholder.typicode.com/todos/1",
-  type: 'GET',
-  success: function(res) {
 
-      $("#ajaxValue").html(res.title);
 
-      console.log(res);
-    
-  }
-})
 
