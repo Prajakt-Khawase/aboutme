@@ -48,7 +48,11 @@ Hi Myself Prajakt. I am from India. I am a student of NorthWest Missiouri State 
  - [getbootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
  - [fontawesome.com](https://fontawesome.com/v4.7.0/icon/bitbucket-square)
 
- ## External Referances used for Module 2: P3 styled site
+ ## External Referances used for Module 3: P3 styled site
+
+ - [w3School](https://www.w3schools.com/js/js_ajax_intro.asp)
+ - [The Simpsons Quote Api Usage](https://thesimpsonsquoteapi.glitch.me/)
+
 
     
 
