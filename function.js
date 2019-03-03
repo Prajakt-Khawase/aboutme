@@ -93,6 +93,11 @@ function calcVolume(l,h,w){
   
 }
 
+$(document).ready(function(){
+  $("button").click(function(){
+    $(".test").hide();
+  });
+});
 
 $.ajax({
   url: "https://jsonplaceholder.typicode.com/todos/1",
